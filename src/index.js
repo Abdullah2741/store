@@ -77,5 +77,24 @@ document.querySelectorAll('.color-option input[type="radio"]').forEach(item => {
 })
 
 
+// شفرة التحديث التلقائى للسعر الاجمالي 
+//حساب سعر اجمالي المنتج
+
+ document.querySelectorAll("[data-product-quantity]").forEach(item =>{
+  item.addEventListener("change", () => {
+    const newQuantity = item.value;
+    const parent = item.closest('[data-product-info]');
+    const pricePerUnit = parent.getAttribute('data-product-price');
+    const totalpriceforproduct = newQuantity * pricePerUnit
+    parent.querySelector('.total-price-for-product').innerHTML = totalpriceforproduct + "$"
+  })
+ })
+
+
+
+
+
+
+
 // شفرة التاريخ في ذيل الصفحة
 document.getElementById("fullyear").innerHTML = new Date().getFullYear();

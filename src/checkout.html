@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر عربي |صفحة الشراء</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- القائمة العلوية  -->
+        <div class="row">
+            <nav class="navbar custom-navbar navbar-expand-lg">
+              <div class="container px-0">
+                <div class="navbar-header">
+                  <button
+                    class="navbar-toggler btn btn-icon"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <i class="fas fa-bars fa-xl"></i>
+                  </button>
+                  <a href="./checkout.html" class="btn-icon btn d-lg-none" id="btn-shopping-card"
+                  title="عربة الشراء" data-bs-toggle="tooltip" data-bs-placement="bottom">
+                  <i class="fa-solid fa-cart-shopping "></i>
+                </a>
+    
+                  <a class="navbar-brand me-5" href="#">
+                    <img src="./images/logo.png" alt="متجر عربي" />
+                  </a>
+                </div>
+                <form action="" class="d-flex inline-form">
+                  <input
+                    type="search"
+                    class="form-control custom-form-control"
+                    placeholder=" ....كلمة البحث"
+                  />
+                  <div class="dropdown">
+                    <a
+                      href="#"
+                      role="button"
+                      aria-expanded="false"
+                      class="nav-link dropdown-toggle custom-btn catagories"
+                      data-bs-toggle="dropdown"
+                      >اختر فئة</a
+                    >
+                    <ul class="dropdown-menu custom-dropdown-menu">
+                      <li>
+                        <div class="checkbox">
+                          <label>
+                            <input
+                              type="checkbox"
+                              name="search-category"
+                              value="Men"
+                              class="ms-2"
+                            />
+                            Men
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <label>
+                            <input
+                              type="checkbox"
+                              name="search-category"
+                              value="Women"
+                              class="ms-2"
+                            />
+                            Women
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox">
+                          <label>
+                            <input
+                              type="checkbox"
+                              name="search-category"
+                              value="Kids"
+                              class="ms-2"
+                            />
+                            Kids
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <button type="submit" class="btn search-btn custom-btn-search">
+                    ابحث
+                  </button>
+                </form>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav ms-auto">
+                    <li class="nav-tiem">
+                      <a href="./index.html" class="nav-link"
+                        >الصفحة الرئيسية</a
+                      >
+                    </li>
+                    <li class="nav-item dropdown">
+                      <div class="dropdown">
+                        <a
+                          href="#"
+                          role="button"
+                          aria-expanded="false"
+                          id="navbarDropdown2"
+                          class="nav-link dropdown-toggle"
+                          data-bs-toggle="dropdown"
+                          >اقسام المتجر</a
+                        >
+                        <ul class="dropdown-menu custom-dropdown-menu">
+                          <li>
+                            <a href="#" class="dropdown-item">men</a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown-item">women</a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown-item">kids</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">البحث المتقدم</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">تواصل معنا</a>
+                    </li>
+                    <li class="mt-2">
+                      <a href="./checkout.html" class="btn-icon btn car-icon" id="btn-shopping-card"
+                        title="عربة الشراء" data-bs-toggle="tooltip" data-bs-placement="bottom">
+                        <i class="fa-solid fa-cart-shopping "></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        <!-- نهاية القائمة العلوية  -->
+              
+          
+              <div class="container">
+                    <!-- قائمة التنقل الفرعية لمعرفة مسار الصفحة  -->
+                <div class="container">
+                <div class="row" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb custom-braedcrumb">
+                     <li class="breadcrumb-item">
+                        <a href="index.html">الصفحة الرئيسية</a>
+                     </li>
+                     <li class="breadcrumb-item active">
+                       عربة الشراء
+                     </li>
+                    </ol>
+    
+                </div>
+                </div>
+
+            <div class="row">
+            <h1 class="heading custom-heading">عربة الشراء</h1>
+            <form action="./payment.html" id="form-checkout">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>المنتج</th>
+                            <th>السعر</th>
+                            <th>العدد المطلوب</th>
+                            <th>السعر الاجمالي</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr data-product-info data-product-price="200">
+                            <td>
+                                <div class="custom-media d-flex">
+                                    <img src="./images/adidas_1.jpg" alt="adidas_1">
+                                    <div>
+                                        <h4>تي شيرت اديدس</h4>
+                                    
+                                    <div class="custom-text-muted">
+                                        ملابس رجالي
+                                    </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>200$</td>
+                            <td>
+                                <select name="product1" class="custom-form-control quantity" id="product-quantity" data-product-quantity>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3" selected>3</option>
+                                </select>
+                            </td>
+                            <td class="total-price-for-product">600$</td>
+                            <td>
+                                <button class="btn custom-btn-outline-danger">حذف</button>
+                            </td>
+                         </tr>
+                         <tr  data-product-info data-product-price="400">
+                            <td>
+                                <div class="custom-media d-flex">
+                                    <img src="./images/lacoste_3.jpg" alt="lacoste">
+                                    <div>
+                                        <h4>تي شيرت رجالي من لاكوست</h4>
+                                    
+                                    <div class="custom-text-muted">
+                                        ملابس رجالي
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td>400$</td>
+                            <td>
+                                <select name="product1" class="custom-form-control quantity" data-product-quantity>
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </td>
+                            <td class="total-price-for-product">800$</td>
+                            <td>
+                                <button class="btn custom-btn-outline-danger">حذف</button>
+                            </td>
+                         </tr>
+                    </tbody>
+                    <tfoot>
+                        <td class="total-price custom-text-muted" colspan="5">
+                            <span>السعر الاجمالي لجميع المنتجات:</span>
+                            <span id="total-price-for-all-product">1500</span>
+                            <span>دولار</span>
+                        </td>
+                    </tfoot>
+                </table>
+            </form>
+          </div>
+            </div>
+           
+    </div>
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>

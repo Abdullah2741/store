@@ -229,7 +229,7 @@ body {
 }
 .custom-thumbnail{
   border: 2px solid #eef0ea;
-  padding: 8px;
+  padding: 3px;
   cursor: pointer;
   margin-bottom: 100px;
 }
@@ -543,7 +543,58 @@ footer #brand-logos .img-container img{
 
 
 
+/* صفحة عربة الشراء  */
 
+.custom-media img{
+  width:80px;
+  height: 80px;
+  border: 1px solid #ebebeb;
+  margin-left: 10px;
+}
+.custom-table th,
+.custom-table td{
+  padding: 15px;
+  font-size: 120%;
+  vertical-align: middle;
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+}
+.custom-table h4{
+  font-size: 18px;
+  margin: 12px 0;
+}
+.custom-table th{
+  color: #c2c2c2;
+  font-weight: normal;
+}
+.custom-table th:first-child,
+.custom-table td:first-child{
+  width: 50%;
+}
+.custom-table th:not(:first-child),
+.custom-table td:not(:first-child){
+  text-align: center;
+}
+h1.custom-heading{
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+.custom-table tfoot td{
+  border: none;
+  font-size: 150%;
+}
+#total-price-for-all-product{
+  color: #000;
+}
+.custom-btn-outline-danger{
+  color: #ff3956;
+  border-color: #ff3956;
+  background-color: transparent;
+}
+.custom-btn-outline-danger:hover{
+  color: #b9001b;
+  border-color: #b9001b;
+}
 
 
 /* تجاوبية الصفحة الرئيسية */
