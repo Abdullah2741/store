@@ -45,10 +45,35 @@ document.querySelectorAll("[data-product-quantity]").forEach(item =>{
     const newQuantity = item.value;
     const parent = item.closest('[data-product-info]');
     const pricePerUnit = parent.getAttribute('data-product-price');
-    const totalpriceforproduct = newQuantity * pricePerUnit
-    parent.querySelector('.total-price-for-product').innerHTML = totalpriceforproduct + "$"
+    const totalPriceForProduct = newQuantity * pricePerUnit
+    parent.querySelector('.total-price-for-product').innerHTML = totalPriceForProduct + "$"
+
+    calculateTotalPrice()
   })
  })
+
+//  حذف المنتجات من عربة الشراء
+document.querySelectorAll("[data-remove-card]").forEach(item => {
+  item.addEventListener("click", () =>{
+    item.closest("[data-product-info]").remove();
+          calculateTotalPrice()
+
+  })
+})
+
+function calculateTotalPrice(){
+  let totalPriceForAllProduct = 0;
+  document.querySelectorAll("[data-product-info]").forEach(product =>{
+    const pricePerUnite = product.getAttribute("data-product-price");
+    const quantity = product.querySelector("[data-product-quantity]").value 
+    const totalPriceForProduct = pricePerUnite * quantity
+    totalPriceForAllProduct = totalPriceForAllProduct + totalPriceForProduct
+  })
+  document.getElementById("total-price-for-all-product").innerHTML = totalPriceForAllProduct + "$"
+}
+ 
+
+
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
