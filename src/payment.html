@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>متجر عربي| صفحة الدفع</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- القائمة العلوية  -->
+      <div class="row">
+        <nav class="navbar custom-navbar navbar-expand-lg">
+          <div class="container px-0">
+            <div class="navbar-header">
+              <button
+                class="navbar-toggler btn btn-icon"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="fas fa-bars fa-xl"></i>
+              </button>
+              <a
+                href="./checkout.html"
+                class="btn-icon btn d-lg-none"
+                id="btn-shopping-card"
+                title="عربة الشراء"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+              >
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+
+              <a class="navbar-brand me-5" href="#">
+                <img src="./images/logo.png" alt="متجر عربي" />
+              </a>
+            </div>
+            <form action="" class="d-flex inline-form">
+              <input
+                type="search"
+                class="form-control custom-form-control"
+                placeholder=" ....كلمة البحث"
+              />
+              <div class="dropdown">
+                <a
+                  href="#"
+                  role="button"
+                  aria-expanded="false"
+                  class="nav-link dropdown-toggle custom-btn catagories"
+                  data-bs-toggle="dropdown"
+                  >اختر فئة</a
+                >
+                <ul class="dropdown-menu custom-dropdown-menu">
+                  <li>
+                    <div class="checkbox">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="search-category"
+                          value="Men"
+                          class="ms-2"
+                        />
+                        Men
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="search-category"
+                          value="Women"
+                          class="ms-2"
+                        />
+                        Women
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="search-category"
+                          value="Kids"
+                          class="ms-2"
+                        />
+                        Kids
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <button type="submit" class="btn search-btn custom-btn-search">
+                ابحث
+              </button>
+            </form>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-tiem">
+                  <a href="./index.html" class="nav-link">الصفحة الرئيسية</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <div class="dropdown">
+                    <a
+                      href="#"
+                      role="button"
+                      aria-expanded="false"
+                      id="navbarDropdown2"
+                      class="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      >اقسام المتجر</a
+                    >
+                    <ul class="dropdown-menu custom-dropdown-menu">
+                      <li>
+                        <a href="#" class="dropdown-item">men</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown-item">women</a>
+                      </li>
+                      <li>
+                        <a href="#" class="dropdown-item">kids</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">البحث المتقدم</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">تواصل معنا</a>
+                </li>
+                <li class="mt-2">
+                  <a
+                    href="./checkout.html"
+                    class="btn-icon btn car-icon"
+                    id="btn-shopping-card"
+                    title="عربة الشراء"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- نهاية القائمة العلوية  -->
+      <div class="container">
+        <!-- قائمة التنقل الفرعية لمعرفة مسار الصفحة  -->
+        <div
+          class="row"
+          style="--bs-breadcrumb-divider: '>'"
+          aria-label="breadcrumb"
+        >
+          <ol class="breadcrumb custom-braedcrumb">
+            <li class="breadcrumb-item">
+              <a href="index.html">الصفحة الرئيسية</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="./checkout.html">عربة الشراء</a>
+            </li>
+            <li class="breadcrumb-item active">الدفع</li>
+          </ol>
+        </div>
+        <!-- نهاية القائمة  -->
+        <!-- نموذج الدفع  -->
+        <form id="form-checkout">
+          <div class="row">
+            <div class="col-lg-6">
+              <h3 class="heading">بياناتك الشخصية</h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    name="first_name"
+                    placeholder="الاسم الاول"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    name="last_name"
+                    placeholder="الاسم الاخير"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control custom-form-control custom-input-details"
+                    name="email"
+                    placeholder="البريد الالكتروني"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    name="aria"
+                    placeholder="المنطقة"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <select
+                    name="country"
+                    class="custom-form-control custom-input-details"
+                    required
+                  >
+                    <option value="" disabled selected>اختر دولة</option>
+                    <option value="sa">السعودية</option>
+                    <option value="eg">مصر</option>
+                    <option value="Qt">قطر</option>
+                    <option value="Du">دبي</option>
+                    <option value="Or">الاردن</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <select
+                    name="city"
+                    class="custom-form-control custom-input-details"
+                    required
+                  >
+                    <option value="" disabled selected>اختر المدينة</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    name="telephone number"
+                    placeholder="رقم الموبايل"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    name="adress_1"
+                    placeholder="العنوان الاول "
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    name="adress_2"
+                    placeholder="العنوان الثاني (اختياري)"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h3 class="heading">بيانات الدفع</h3>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
