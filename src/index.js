@@ -77,29 +77,85 @@ function calculateTotalPrice() {
     totalPriceForAllProduct + "$";
 }
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-  "use strict";
+//  شفرة لاضافة المدن الخاصة بكل دولة عند تحديدها
+const cititesByCountry = {
+  sa: ["الرياض", "جدة", "مكة", "المدينة", "الدمام"],
+  eg: ["القاهرة", "الاسكندرية", "الزقازيق", "منيا القمح", "بنها"],
+  Qt: ["الدوحة", "العريش", "الدوحة الجديدة", "عين سنان", "ابو ثايلة"],
+  Or: ["عمان", "الزرقا", "مرج الحمام", "العقبة"],
+  Im: ["دبي", "ابوظبي", "عجمان", "جبل علي", "مدينة زايد", "الرمس", "المدام"],
+};
+document.querySelectorAll('select[name="country"]').forEach((item) => {
+  item.addEventListener("change", () => {
+    const country = item.value;
+    const cities = cititesByCountry[country];
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll(".needs-validation");
+    document
+      .querySelectorAll("#paymentcities option")
+      .forEach((option) => option.remove());
 
-  // Loop over them and prevent submission
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      "submit",
-      (event) => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
+    const firstoption = document.createElement("option");
+    const optiontext = document.createTextNode("اختر مدينة");
+    firstoption.appendChild(optiontext);
+    firstoption.setAttribute("value", "");
+    firstoption.setAttribute("selected", "true");
+    firstoption.setAttribute("disabled", "true");
 
-        form.classList.add("was-validated");
-      },
-      false
-    );
+    const city_options = document.getElementById("paymentcities");
+    city_options.appendChild(firstoption);
+
+    cities.forEach((city) => {
+      const newoption = document.createElement("option");
+      const optiontext = document.createTextNode(city);
+      newoption.appendChild(optiontext);
+      newoption.setAttribute("value", city);
+      city_options.appendChild(newoption);
+    });
   });
-})();
+})
+ 
+document.querySelectorAll("#form-checkout input[name='payment-method']").forEach(item =>{
+  item.addEventListener('change',()=>{
+    const paymentmethod = item.value;
+    const criditcardinputs = document.querySelectorAll("#cridit_card_info input")
+
+    if(paymentmethod === 'on_delivery'){
+      criditcardinputs.forEach(input =>{
+        input.style.display="none"
+      })
+    }else{
+      criditcardinputs.forEach(input =>{
+        input.style.display="block"
+      })
+    }
+  })
+})
+
+(
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  () => {
+    "use strict";
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll(".needs-validation");
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach((form) => {
+      form.addEventListener(
+        "submit",
+        (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
+  }
+)();
 
 //  شفرة الالوان والمقاسات المتاحة
 document
