@@ -598,6 +598,59 @@ h1.custom-heading {
 
 
 
+/* صفحة البحث */
+#form-advanced-search{
+  border: 1px solid #dbdbdb;
+  height: fit-content;
+}
+#form-advanced-search .card {
+  border: none;
+}
+#form-advanced-search .card .card-header{
+  background-color: transparent;
+  margin-bottom: 15px;
+  padding-bottom: 13px;
+  margin-top: -30px;
+}
+#form-advanced-search .card .custom-header{
+  margin-top: -55px;
+}
+#form-advanced-search .card .list-group-item{
+  border: none;
+}
+#form-advanced-search .card .list-group-item label{
+  font-weight: bold;
+  cursor: pointer;
+}
+.thumbnail-margin-card{
+  margin-bottom: 40px;
+}
+.custom-list-group{
+  border-bottom: 1px solid #ebebeb;
+}
+ .custom-pagination a.page-link{
+  margin-left: 3px !important;
+  margin-right: 3px !important;
+  border: 1px solid #ebebeb !important;
+  width: 32px !important;
+  height: 32px !important;
+  color: #c2c2c2 !important;
+  text-decoration: none !important;
+  outline: none !important;
+  transition: all 0.3s ease !important;
+}
+.custom-pagination li.page-item.active .page-link{
+ background-color: #f8ad47 !important;
+ color: #fff !important;
+ border-color: #f8ad47 !important;
+}
+.custom-pagination .page-link:active,
+.custom-pagination .page-link:focus,
+.custom-pagination .page-link:hover{
+color: #f8ad47 !important;
+background-color: #fff !important;
+border-color: #f8ad47 !important;
+}
 
 @media (max-width: 992px) {
   #carousel-most-sold .carousel-inner .custom-thumbnail {
@@ -689,6 +742,9 @@ h1.custom-heading {
     margin-left: 10px;
     font-size: 20px;
   }
+  .thumbnail-margin-card {
+   height: 350px;
+  }
 }
 @media (max-width: 768px) {
   #carousel-featured,
@@ -728,6 +784,13 @@ h1.custom-heading {
   .hide-on-small {
     display: none;
   }
+  .thumbnail-margin-card {
+    height: 370px;
+   }
+   .thumbnail-margin-card img{
+    margin: auto;
+   }
+  
 }
 @media (max-width: 576px) {
   .inline-form .search-btn {
