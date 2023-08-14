@@ -649,6 +649,37 @@ background-color: #fff !important;
 border-color: #f8ad47 !important;
 }
 
+/* صفحة تواصل معنا */
+.map iframe{
+ height: 250px;
+}
+.contact-info ul.contact-list li{
+  list-style: none;
+  margin-bottom: 10px;
+}
+.fa-xl{
+  color: #da9739 !important;
+  margin-left: 15px !important;
+  margin-right: -20px;
+}
+.form-contact-massage input,
+.form-contact-massage textarea{
+  margin-bottom: 15px;
+  box-shadow: none !important;
+}
+.form-contact-massage input {
+  height: 45px;
+}
+.custom-btn-massage{
+  width: 25%;;
+}
+.contact-info label{
+ font-size: 18px;
+}
+.form-contact-massage textarea{
+  height: 125px;
+}
+
 
 @media (max-width: 1199px){
  .thumbnail-margin-card .clearfix h4{
@@ -753,6 +784,9 @@ border-color: #f8ad47 !important;
     justify-content: center;
     align-items: center;
   }
+  .form-contact-massage h5{
+   margin-top: 50px;
+   }
 }
 @media (max-width: 768px) {
   #carousel-featured,
@@ -818,5 +852,8 @@ border-color: #f8ad47 !important;
   #form-product-selection,
   .comments {
     padding-right: 15px;
+  }
+  .custom-btn-massage{
+    width: 30%;
   }
 }

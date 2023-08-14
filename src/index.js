@@ -18,6 +18,8 @@ document.querySelectorAll(".add-to-card-btn").forEach((item) => {
   });
 });
 
+
+
 //  شفرة الالوان والمقاسات المتاحة
 document
   .querySelectorAll('.size-option input[type="radio"]')
@@ -40,6 +42,10 @@ document
       item.parentNode.parentNode.classList.add("active");
     });
   });
+
+
+
+
 
 // شفرة التحديث التلقائى للسعر الاجمالي
 //حساب سعر اجمالي المنتج
@@ -76,6 +82,8 @@ function calculateTotalPrice() {
   document.getElementById("total-price-for-all-product").innerHTML =
     totalPriceForAllProduct + "$";
 }
+
+
 
 //  شفرة لاضافة المدن الخاصة بكل دولة عند تحديدها
 const cititesByCountry = {
@@ -131,6 +139,33 @@ document.querySelectorAll("#form-checkout input[name='payment-method']").forEach
   })
 })
 
+
+
+
+//  شفرة الالوان والمقاسات المتاحة
+document
+  .querySelectorAll('.size-option input[type="radio"]')
+  .forEach((item) => {
+    item.addEventListener("change", () => {
+      document.querySelectorAll(".size-option").forEach((i) => {
+        i.classList.remove("active");
+      });
+      item.parentNode.parentNode.classList.add("active");
+    });
+  });
+
+document
+  .querySelectorAll('.color-option input[type="radio"]')
+  .forEach((item) => {
+    item.addEventListener("change", () => {
+      document.querySelectorAll(".color-option").forEach((i) => {
+        i.classList.remove("active");
+      });
+      item.parentNode.parentNode.classList.add("active");
+    });
+  });
+
+
 (
   // Example starter JavaScript for disabling form submissions if there are invalid fields
   () => {
@@ -156,29 +191,6 @@ document.querySelectorAll("#form-checkout input[name='payment-method']").forEach
     });
   }
 )();
-
-//  شفرة الالوان والمقاسات المتاحة
-document
-  .querySelectorAll('.size-option input[type="radio"]')
-  .forEach((item) => {
-    item.addEventListener("change", () => {
-      document.querySelectorAll(".size-option").forEach((i) => {
-        i.classList.remove("active");
-      });
-      item.parentNode.parentNode.classList.add("active");
-    });
-  });
-
-document
-  .querySelectorAll('.color-option input[type="radio"]')
-  .forEach((item) => {
-    item.addEventListener("change", () => {
-      document.querySelectorAll(".color-option").forEach((i) => {
-        i.classList.remove("active");
-      });
-      item.parentNode.parentNode.classList.add("active");
-    });
-  });
 
 // شفرة التاريخ في ذيل الصفحة
 document.getElementById("fullyear").innerHTML = new Date().getFullYear();
