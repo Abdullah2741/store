@@ -2,6 +2,7 @@ window.bootstrap = require("bootstrap/dist/js/bootstrap.bundle.js");
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
 import "@fortawesome/fontawesome-free/js/all.min.js";
+import './sass/custom.scss';
 
 //   شفرة العنوان المنبثق اسفل عربة الشراء
 const tooltipTriggerList = document.querySelectorAll(
