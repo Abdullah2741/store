@@ -1,5 +1,7 @@
-$my-color:#000;
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-body{
- background-color:$my-color ;
-}
+
+$warning:#e6ddc3;
+$theme-colors:(
+    "warning": $warning
+);
