@@ -37,17 +37,17 @@
 
 
 
-// .custom-btn-warning {
-//     background-color: $brand-warning;
-// }
-//   .custom-btn-warning:hover,
-//   .custom-btn-warning:focus,
-//   .custom-btn-warning:active,
-//   .custom-btn-warning:active:focus,
-//   .custom-btn-warning:active:hover {
-//     background-color: $btn-warning-dark;
-//     border-color: $btn-warning-dark;
-//   }
+.custom-btn-warning {
+    background-color: $brand-warning;
+}
+  .custom-btn-warning:hover,
+  .custom-btn-warning:focus,
+  .custom-btn-warning:active,
+  .custom-btn-warning:active:focus,
+  .custom-btn-warning:active:hover {
+    background-color: $btn-warning-dark;
+    border-color: $btn-warning-dark;
+  }
 
 
   .custom-btn-outline-danger {
